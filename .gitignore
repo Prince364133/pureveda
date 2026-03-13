@@ -1,0 +1,7 @@
+.gemini/
+brain/
+*.log
+.vscode/
+.DS_Store
+node_modules/
+.npm/

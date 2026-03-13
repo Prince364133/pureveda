@@ -1,0 +1,47 @@
+@import "https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&amp;display=swap";@import "https://fonts.googleapis.com/css2?family=Noto+Serif+Devanagari:wght@400;500;600;700;800;900&amp;display=swap";.foo {
+    animation: foo .9s cubic-bezier(.9,.7,.5,.9) infinite
+}
+
+.clippath1 {
+    -webkit-clip-path: polygon(0 0,100% 0,97% 50%,100% 100%,0 100%,3% 50%);
+    clip-path: polygon(0 0,100% 0,97% 50%,100% 100%,0 100%,3% 50%)
+}
+
+@keyframes foo {
+    0% {
+        color: #000
+    }
+
+    50% {
+        transform: scale(1.2)
+    }
+}
+
+.pop_imagehfv {
+    animation: zoom-in-zoom-out 1.2s cubic-bezier(.9,.7,.5,.9) infinite
+}
+
+@keyframes zoom-in-zoom-out {
+    0% {
+        transform: scale(.8);
+        opacity: 1
+    }
+
+    50% {
+        transform: scale(1);
+        opacity: .5
+    }
+
+    to {
+        transform: scale(.8);
+        opacity: 1
+    }
+}
+
+.fontPoppins {
+    font-family: Poppins,sans-serif
+}
+
+.fontNoto {
+    font-family: "noto serif devanagari",sans-serif
+}
