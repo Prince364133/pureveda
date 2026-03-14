@@ -936,6 +936,14 @@
               window.location.href = "thank.html";
             });
           });
+
+          // Auto-scroll to form section on page load
+          window.addEventListener('load', function() {
+            const formSection = document.getElementById('formcallhide');
+            if (formSection) {
+              formSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+          });
         </script>
 
         <!-- <p>load</p> -->
