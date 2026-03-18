@@ -29,31 +29,6 @@
 
     // ... (rest of the extension checks)
 
-    function get_real_ip_address()
-    {
-        $remote_addr        = ! empty($_SERVER['REMOTE_ADDR']) ? $_SERVER['REMOTE_ADDR'] : '0.0.0.0';
-        $allowed_headers    = [
-            'HTTP_CF_CONNECTING_IP',
-            'HTTP_TRUE_CLIENT_IP',
-            'HTTP_X_REAL_IP',
-            'HTTP_X_FORWARDED_FOR'
-        ];
-
-        foreach ($allowed_headers AS $header) {
-            if ( ! empty($_SERVER[$header])) {
-                $ips = explode(',', $_SERVER[$header]);
-                foreach ($ips AS $ip) {
-                    $ip = trim($ip);
-                    $ip = preg_replace('/:\d+$/', '', $ip);
-                    $ip = trim($ip, '[]');
-                    if (filter_var($ip, FILTER_VALIDATE_IP, FILTER_FLAG_NO_PRIV_RANGE | FILTER_FLAG_NO_RES_RANGE)) {
-                        return trim($ip);
-                    }
-                }
-            }
-        }
-        return $remote_addr;
-    }
 
     function get_user_agent() {
         return !empty($_SERVER['HTTP_USER_AGENT']) ? $_SERVER['HTTP_USER_AGENT'] : '';
