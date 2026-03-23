@@ -1,4 +1,4 @@
-# Horse Fire — Setup Guide
+# Hammer of Thor — Setup Guide
 
 ## 🔐 Your Admin Dashboard Link
 ```

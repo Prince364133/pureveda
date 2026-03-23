@@ -31,7 +31,7 @@ async function seed() {
       whatsapp_number: "910000000000",
       backend_url: "https://your-app.onrender.com",
       phone_display: "Support Available",
-      business_name: "Horse Fire",
+      business_name: "Hammer of Thor",
       offer_price: "999",
       original_price: "4999",
       updated_at: new Date()
@@ -72,7 +72,7 @@ async function seed() {
 
     console.log(`
 ╔══════════════════════════════════════════════╗
-║           HORSE FIRE — SEED COMPLETE         ║
+║         HAMMER OF THOR — SEED COMPLETE       ║
 ╠══════════════════════════════════════════════╣
 ║ Admin Dashboard URL:                         ║
 ║ /admin/index.html                            ║
