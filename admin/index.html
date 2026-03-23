@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Horse Fire — Admin Dashboard</title>
+    <title>Hammer of Thor — Admin Dashboard</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
@@ -263,7 +263,7 @@
 
     <!-- Header -->
     <header>
-        <div class="logo">🔥 HORSE FIRE ADMIN</div>
+        <div class="logo">🔨 HAMMER OF THOR ADMIN</div>
         <div class="header-right">
             <span id="last-refresh"></span>
             <button class="btn btn-primary" onclick="exportLeads()"><i class="fas fa-file-excel"></i> Export</button>
@@ -396,7 +396,7 @@
 
                 <div class="form-group">
                     <label>Business Name</label>
-                    <input type="text" id="s-business-name" placeholder="Horse Fire">
+                    <input type="text" id="s-business-name" placeholder="Hammer of Thor">
                 </div>
 
                 <div class="row-2" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
@@ -581,7 +581,7 @@
                 <td>
                     <div class="phone-cell">
                         ${lead.phone || ''}
-                        <a href="https://wa.me/91${lead.phone}?text=नमस्ते ${encodeURIComponent(lead.name || '')} जी!" class="wa-link" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://wa.me/91${lead.phone}?text=Hello ${encodeURIComponent(lead.name || '')}!" class="wa-link" target="_blank"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </td>
                 <td>${lead.location || ''}<br><small style="color:var(--muted)">${lead.pincode || ''}</small></td>

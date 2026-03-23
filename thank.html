@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#064e3b">
   
-  <title>à¤‘à¤°à¥à¤¡à¤° à¤•à¤¨à¥à¤«à¤°à¥à¤® â€” Hammer of Thor</title>
+  <title>Order Confirmed — Hammer of Thor</title>
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link rel="stylesheet" href="style/main.css">
@@ -44,21 +44,21 @@
             <i class="fas fa-check-circle text-success" style="font-size: 4rem;"></i>
           </div>
           
-          <h1 class="mb-20" style="font-size: 2.5rem; color: var(--color-primary-dark);">à¤‘à¤°à¥à¤¡à¤° à¤¸à¤«à¤² à¤°à¤¹à¤¾!</h1>
-          <p class="text-muted mb-30" style="font-size: 1.15rem;">à¤†à¤ªà¤•à¤¾ à¤‘à¤°à¥à¤¡à¤° à¤¸à¤«à¤²à¤¤à¤¾à¤ªà¥‚à¤°à¥à¤µà¤• à¤ªà¥à¤°à¤¾à¤ªà¥à¤¤ à¤¹à¥‹ à¤—à¤¯à¤¾ à¤¹à¥ˆà¥¤ à¤¹à¤®à¤¾à¤°à¥€ à¤Ÿà¥€à¤® 24 à¤˜à¤‚à¤Ÿà¥‡ à¤•à¥‡ à¤…à¤‚à¤¦à¤° à¤•à¤¨à¥à¤«à¤°à¥à¤®à¥‡à¤¶à¤¨ à¤•à¥‡ à¤²à¤¿à¤ à¤•à¥‰à¤² à¤•à¤°à¥‡à¤—à¥€à¥¤</p>
+          <h1 class="mb-20" style="font-size: 2.5rem; color: var(--color-primary-dark);">Order Successful!</h1>
+          <p class="text-muted mb-30" style="font-size: 1.15rem;">Your order has been successfully placed. Our team will call you within 24 hours for confirmation.</p>
           
           <div style="background: #f9fafb; border: 1px dashed #ccc; padding: 20px; border-radius: var(--radius-md); margin-bottom: 30px; text-align: left;">
-            <h4 class="mb-10 text-primary">à¤‘à¤°à¥à¤¡à¤° à¤¡à¤¿à¤Ÿà¥‡à¤²à¥à¤¸:</h4>
-            <p style="margin-bottom: 5px;"><b>à¤ªà¥ˆà¤•à¥‡à¤œ:</b> <span id="thx-pack">2 Months Course</span></p>
-            <p style="margin-bottom: 5px;"><b>à¤­à¥à¤—à¤¤à¤¾à¤¨:</b> Cash on Delivery</p>
-            <p><b>à¤°à¤¾à¤¶à¤¿:</b> â‚¹<span id="thx-price">1799</span></p>
+            <h4 class="mb-10 text-primary">Order Details:</h4>
+            <p style="margin-bottom: 5px;"><b>Package:</b> <span id="thx-pack">2 Months Course</span></p>
+            <p style="margin-bottom: 5px;"><b>Payment:</b> Cash on Delivery</p>
+            <p><b>Amount:</b> ₹<span id="thx-price">1799</span></p>
           </div>
 
           <a href="offer.html" class="btn btn-primary w-100 btn-pulse cursor-pointer" style="background: linear-gradient(135deg,var(--color-accent),var(--color-accent-hover)); border:none; color: #111; font-weight:800; font-size:1.1rem; border-radius: 30px; box-shadow: 0 8px 25px rgba(251, 191, 36, 0.4);">
              <i class="fas fa-arrow-left" style="font-size: 1.2rem; margin-right: 12px;"></i> Go to Offer Page
           </a>
 
-          <p class="mt-20 text-muted" style="font-size: 0.9rem;">à¤¡à¤¿à¤²à¥€à¤µà¤°à¥€ à¤•à¤¾ à¤¸à¤®à¤¯: 3-5 à¤•à¤¾à¤°à¥à¤¯ à¤¦à¤¿à¤µà¤¸ <br> à¤—à¥à¤ªà¥à¤¤ à¤”à¤° à¤¸à¥à¤°à¤•à¥à¤·à¤¿à¤¤ à¤ªà¥ˆà¤•à¥‡à¤œà¤¿à¤‚à¤— (Discreet Packaging)</p>
+          <p class="mt-20 text-muted" style="font-size: 0.9rem;">Delivery Time: 3-5 Business Days <br> Discreet and Secure Packaging (Discreet Packaging)</p>
        </div>
     </div>
   </section>
@@ -86,7 +86,7 @@
       } catch(e){}
 
       document.querySelectorAll('[data-wa-link]').forEach(el => {
-        el.href = 'https://wa.me/' + window.APP_CONFIG.whatsapp_number + '?text=à¤¨à¤®à¤¸à¥à¤¤à¥‡%2C%20à¤®à¥ˆà¤‚à¤¨à¥‡%20à¤…à¤­à¥€%20' + selectedPack.name + '%20à¤‘à¤°à¥à¤¡à¤°%20à¤•à¤¿à¤¯à¤¾%20à¤¹à¥ˆà¥¤%20à¤•à¥ƒà¤ªà¤¯à¤¾%20à¤•à¤¨à¥à¤«à¤°à¥à¤®%20à¤•à¤°à¥‡à¤‚à¥¤';
+        el.href = 'https://wa.me/' + window.APP_CONFIG.whatsapp_number + '?text=Hi, I just ordered Hammer of Thor (' + selectedPack.name + '). Please confirm my order.';
       });
     }
     init();
