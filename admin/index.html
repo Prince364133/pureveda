@@ -440,7 +440,7 @@
 
 <script type="module">
     import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
-    import { getFirestore, collection, getDocs, updateDoc, doc, query, orderBy, getDoc, setDoc } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+    import { getFirestore, collection, getDocs, updateDoc, deleteDoc, doc, query, orderBy, getDoc, setDoc } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
 
     const firebaseConfig = {
       apiKey: "AIzaSyAY_TN3to4yAqk7IJNqVSKFS-fSuynXwOw",
@@ -597,9 +597,14 @@
                     </select>
                 </td>
                 <td>
-                    <button class="action-btn" onclick="openNotes('${lead._id}', \`${(lead.notes||'').replace(/`/g,"'")}\`, '${(lead.name||'').replace(/'/g,'&apos;')}')">
-                        <i class="fas fa-sticky-note"></i>
-                    </button>
+                    <div style="display:flex; gap:8px;">
+                        <button class="action-btn" onclick="openNotes('${lead._id}', \`${(lead.notes||'').replace(/`/g,"'")}\`, '${(lead.name||'').replace(/'/g,'&apos;')}')">
+                            <i class="fas fa-sticky-note"></i>
+                        </button>
+                        <button class="action-btn" style="color:#e17055;" onclick="deleteLead('${lead._id}', '${(lead.name||'').replace(/'/g,'&apos;')}')">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </div>
                 </td>
             </tr>
             `;
@@ -652,6 +657,18 @@
             closeModal();
             renderCurrentPage();
         } catch(e) { console.error('Notes save failed:', e); }
+    }
+
+    window.deleteLead = async (id, name) => {
+        if (confirm(`Are you sure you want to delete lead for ${name}?`)) {
+            try {
+                await deleteDoc(doc(db, "leads", id));
+                await fetchLeadsFromFirebase();
+            } catch (e) {
+                console.error("Error deleting lead:", e);
+                alert("Error deleting lead!");
+            }
+        }
     }
 
     function exportLeads() {
