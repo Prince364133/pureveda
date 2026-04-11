@@ -2,13 +2,13 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebas
 import { getFirestore, doc, onSnapshot, collection, getDocs } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAY_TN3to4yAqk7IJNqVSKFS-fSuynXwOw",
-  authDomain: "teste-erhij8.firebaseapp.com",
-  projectId: "teste-erhij8",
-  storageBucket: "teste-erhij8.firebasestorage.app",
-  messagingSenderId: "744778225564",
-  appId: "1:744778225564:web:f5d6b73e501495b3dfda59",
-  measurementId: "G-JRQJXP4531"
+  apiKey: "AIzaSyAnD0LImABR235yBki1bb76omAprp9TMnM",
+  authDomain: "pureveda-website.firebaseapp.com",
+  projectId: "pureveda-website",
+  storageBucket: "pureveda-website.firebasestorage.app",
+  messagingSenderId: "896734665834",
+  appId: "1:896734665834:web:be60231617e9ba56a67e13",
+  measurementId: "G-MEXRQ6W6G6"
 };
 
 const app = initializeApp(firebaseConfig);
